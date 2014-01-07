@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "VB Enhancer",
+  "description": "Provides options to enhance the basic features of vBulletin forums.",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs",
+    "http://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "jquery.min.js", "vb_enhancer.js" ],
+      "matches": [ "http://*/*", "https://*/*" ] 
+  } ]
+}
